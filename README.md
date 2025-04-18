@@ -1,4 +1,4 @@
-# Raspberry Pi Stratun 1 NTP Server with GPS & PPS
+# Raspberry Pi Stratum 1 NTP Server with GPS & PPS
 
 ## Clock Synchronization
 
@@ -24,14 +24,14 @@ NTP servers are owned and operated by a variety of organizations, including gove
 
 NIST (National Institute of Standards and Technology) is an agency in the U.S. Department of Commerce. It was founded in 1901 and is one of the nation's oldest physical science laboratories. NIST operates a set of NTP servers that provide highly accurate time derived from atomic clocks. These servers are part of the NIST Internet Time Service and are widely used for timekeeping. The NIST NTP servers are known for their high accuracy, reliability, and security. NIST also offers secure NTP (SNTP) servers that use authentication to ensure the integrity of the time information. You can find a list of NIST NTP server [here](https://tf.nist.gov/tf-cgi/servers.cgi).
 
-Many universities run their own NTP servers for academic and research purposes such as MIT, Stanford, and Berkely.
+Many universities run their own NTP servers for academic and research purposes such as MIT, Stanford, and Berkley.
 
     time.mit.edu
     time.stanford.edu
     ntp1.net.berkeley.edu
     ntp.gsu.edu
 
-MIT NTP is a stratun 2 server:
+MIT NTP is a stratum 2 server:
 
 ```bash
 ntpdate -q time.mit.edu
@@ -345,9 +345,9 @@ To exit minicom: Press Ctrl+A, then X, then press Enter.
 
 gpsd is a service daemon that interfaces with GPS hardware devices and provides location, time, and velocity data to client applications over a standardized TCP/IP interface.
 
-- gpsd reads data from GNSS receivers (typically via serial interfaces)
+- gpsd reads data from GNSS receivers
 - Interprets NMEA sentences or binary protocols
-- Makes the parsed data available to programs such as cgps, ntpd, or chronyd
+- Makes the parsed data available to programs such as `cgps`, `ntpd`, or `chronyd`
 
 This enables multiple clients to simultaneously access GPS information without directly handling low-level serial communication. This makes gpsd a central hub for GPS data on Linux systems.
 
